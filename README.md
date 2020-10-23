@@ -3,6 +3,24 @@
 This library is used to simplify the connections to your backend RESTful api, and supports multiple endpoint/servers.
 Also provides a Base Resource service which can be used to make the crud operations consistent and simple.
 
+Basically instead of writing this piece of code repeatedly and change only the last bit
+```
+    http.get('https://app-backend.com/api/v2/items');
+    http.get('https://app-backend.com/api/v2/stores');
+```
+
+now you just write this and change the path and optionally the server and api version that you pre-configure
+```
+    api.get({path: 'items'});
+    api.get({path: 'stores'});
+```
+
+### Installation
+
+Install with npm
+
+`npm i @monabbous/ng-api-wrapper`
+
 ### Usage
 
 first import the module and write your configurations in your `AppModule`
@@ -125,13 +143,3 @@ you can simplify your usage of this service like so:
     }
     
 that's it just install with `npm i @monabbous/ng-api-wrapper` and start APIing :D
-
-instead of this code repeatedly and change only the last bit
-```
-    http.get('https://app-backend.com/api/v2/items');
-```
-
-now you just write this and change the path and optionally the server and api version that you pre-configure
-```
-    api.get({path: 'items'});
-```
