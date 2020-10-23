@@ -75,7 +75,7 @@ To use it, first create a new Service and an interface that extends the `Resourc
         name: string;
       };
       base_price: number;
-      disount: number;
+      discount: number;
     }
     
     @Injectable({
